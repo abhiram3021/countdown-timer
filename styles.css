@@ -1,0 +1,100 @@
+/* Basic styling for the body */
+body {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  
+  /* Adding a background image */
+  background-image: url('images.png'); /* Replace with your image file */
+  background-size: cover;
+  background-position: center;
+  transition: background-color 1s; /* Smooth transition for background color change */
+}
+
+/* Styling for the header */
+h1 {
+  color: #ffffff;
+  font-family: 'Trebuchet MS', sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.836);
+}
+
+/* Styling for the input field */
+input {
+  padding: 8px;
+  font-size: 1em;
+  margin-bottom: 20px;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+}
+
+/* Button styling */
+button {
+  background-color: green; /* Initial green color */
+  color: rgba(255, 255, 255, 0.952);
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: 'Verdana', sans-serif;
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: #005bb5; /* Darker blue on hover */
+}
+
+/* Countdown text styling */
+#demo {
+  font-size: 1.5em;
+  color: red; /* red color for countdown */
+  margin-top: 20px;
+}
+
+/* Confetti effect container */
+#effect-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Prevent interactions with the confetti */
+  z-index: 1000; /* Ensure the confetti stays on top */
+}
+
+/* Styling individual confetti pieces */
+.confetti-piece {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  opacity: 0.8;
+  animation: side-fall 8s ease-out forwards;
+}
+
+/* Keyframe animation for confetti moving from the left */
+@keyframes side-fall {
+  0% {
+    transform: translateX(10px) rotate(10deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(calc(100vw + 100px)) rotate(360deg); /* Move confetti off-screen */
+    opacity: 0; /* Fade out */
+  }
+}
+
+/* Keyframe animation for confetti moving from the right */
+@keyframes side-fall-reverse {
+  0% {
+    transform: translateX(0) rotate(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(calc(-100vw - 100px)) rotate(-360deg); /* Move confetti off-screen to the left */
+    opacity: 0; /* Fade out */
+  }
+}

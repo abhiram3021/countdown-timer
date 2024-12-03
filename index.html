@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Timer</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Linking to the external CSS -->
+</head>
+<body>
+  <!-- Main Title -->
+  <h1>Countdown Timer</h1>
+
+  <!-- Input for selecting a time -->
+  <label for="meeting-time"></label>
+  <input type="datetime-local" id="meeting-time" name="meeting-time" />
+
+  <!-- Button to start the countdown -->
+  <button onclick="startTimer()">GET START</button>
+
+  <!-- Countdown display -->
+  <p id="demo"></p>
+
+  <!-- Container for the confetti visual effects -->
+  <div id="effect-container"></div>
+
+  <!-- Link to external JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
